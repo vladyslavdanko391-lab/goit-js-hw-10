@@ -48,12 +48,12 @@ function onFormSubmit(e) {
 
     makeOrder(delay, shouldResolve)
       .then(delay => {
-        row.className = 'row-done';
+        row.className = 'row-ok';
         row.textContent = `✅ ${drinkName} · готово! · ${delay}ms`;
     })
 
     .catch(delay => {
-        row.className = 'row-fail';
+        row.className = 'row-err';
         row.textContent = `❌ ${drinkName} · скасовано! · ${delay}ms`;
     })
 
